@@ -6,7 +6,7 @@ import cityNameMap from '../utils/cityKor'
 const WeatherBox = ({weather}) => {
 
     const cityNameKor = cityNameMap[weather?.name] || weather?.name;
-
+ 
   return (
     <div>
         <div className = "weather">
