@@ -22,12 +22,7 @@ function App() {
   
   const [weather, setWeather] = useState(null);
 
-  useEffect(()=>{
-
-    getCurrentLocation()
-
-  }, [])
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getCurrentLocation = () =>{
     
     // 현재 경도, 위도 가져오기
@@ -38,6 +33,12 @@ function App() {
       getWeatherByCurrentLocation(lat, lon);
     });
   } 
+
+  useEffect(()=>{
+
+    getCurrentLocation()
+
+  }, [getCurrentLocation])
 
   const getWeatherByCurrentLocation = async(lat, lon) =>{
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=0ed1ceeff176e1a5e55937388400772b&units=metric`;
