@@ -21,9 +21,9 @@ const WeatherBox = ({weather}) => {
                 {/* 간단하게 소수점 첫째자리까지만 보이도록 함. */}
                 {weather?.main.temp.toFixed(1)}℃ / {(weather?.main.temp * (9 / 5) + 32).toFixed(1)}℉
             </h3>
-            <h3 className = "sky">
+            <h4 className = "sky">
                 {wDescEngToKor(weather?.weather[0]?.id)}
-            </h3>
+            </h4>
         </div>
     </div>
   )
