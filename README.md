@@ -2,7 +2,7 @@
 
 **Weather App**
 
-![image](https://github.com/user-attachments/assets/78597c57-50a1-4ebe-8994-cb6417fe0dd1)
+![image]()
 
 ### **[날씨 앱 바로가기~🌦](https://jihyoung-rps-game-final.netlify.app/)**
 
