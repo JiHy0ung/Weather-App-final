@@ -147,7 +147,8 @@ body{
   justify-content: center;
   align-items: center;
   width: 40vw;
-  padding: 1em;
+  padding-inline: 1em;
+  padding-block: 0.5em;
   gap: 2em;
 }
 
@@ -161,9 +162,9 @@ body{
 .place{
   font-family: 'Paperlogy';
   font-weight: 600;
-  font-size: 50px;
+  font-size: 40px;
   letter-spacing: -1px;
-
+  
 }
 
 .sky{
@@ -177,7 +178,7 @@ body{
   font-family: 'Paperlogy';
   font-weight: 400;
   font-size: 20px;
-  
+
 }
 
 .w-msg{
@@ -249,7 +250,7 @@ body{
 @media (max-width: 768px) {
 
   .a{
-    transform: translateY(-80px);
+    transform: translateY(-70px);
   }
 
   body {
