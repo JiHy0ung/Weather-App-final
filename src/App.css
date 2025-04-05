@@ -248,6 +248,11 @@ body{
 }
 
 @media (max-width: 768px) {
+
+  .a{
+    transform: translateY(-150px);
+  }
+
   body {
     height: 100vh;
     background-size: cover;
