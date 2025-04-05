@@ -147,7 +147,7 @@ body{
   justify-content: center;
   align-items: center;
   width: 40vw;
-  padding: 2em;
+  padding: 1em;
   gap: 2em;
 }
 
@@ -155,7 +155,6 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
   text-align: left;
 }
 
@@ -198,8 +197,7 @@ body{
   justify-content: center;
   align-items: center;
   gap: 0.5em;
-  padding-block: 1em;
-  padding-inline: 1em;
+  padding: 1em;
   font-family: 'Paperlogy';
 }
 

@@ -17,7 +17,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import WeatherBox from './component/WeatherBox';
 import WeatherButtons from './component/WeatherButtons';
-import ClipLoader from "react-spinners/ClipLoader";
+import MoonLoader from "react-spinners/MoonLoader";
 import { getWeatherCategory } from './utils/weatherKor';
 
 const OPENWEATHER_API_KEY = process.env.REACT_APP_OPENWEATHER_API_KEY;
@@ -124,31 +124,32 @@ function App() {
   return (
     <div className = {`${type}`}>
         <div className = "container">
-        <div className = "a"> 
           {loading?
-          <ClipLoader
+          <MoonLoader
             color = "#ffffff"
             loading={loading}
-            size={150}
-            aria-label="Loading Spinner"
-            data-testid="loader"
+            size={100}
+            speedMultiplier={0.8}
           />
           :
-          <>
-          <div className = "box">
+          <div className = "a"> 
           
-            <WeatherBox weather = {weather} loading = {loading}/>
+            <div className = "box">
+            
+              <WeatherBox weather = {weather} loading = {loading}/>
+
+            </div>
+            
+            <div className="w-msg">
+              {getWeatherMessage(weather)}
+            </div>
+
+            <WeatherButtons cities = {cities} changeCity = {changeCity}/>
 
           </div>
-          <div className="w-msg">
-            {getWeatherMessage(weather)}
-          </div>
-          <WeatherButtons cities = {cities} changeCity = {changeCity}/>
-          </>
           
           }
           
-        </div>
       </div>
     </div>
   );
