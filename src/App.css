@@ -64,7 +64,7 @@
 
 body{
   background-image: url('/images/background-loading.png'), url('https://wmo.int/sites/default/files/2023-12/thumbnails_5.jpg');
-  height: 100vh;
+  height: 100dvh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
