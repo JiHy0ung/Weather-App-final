@@ -250,7 +250,7 @@ body{
 @media (max-width: 768px) {
 
   .a{
-    transform: translateY(-150px);
+    transform: translateY(-80px);
   }
 
   body {
