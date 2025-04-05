@@ -188,7 +188,6 @@ body{
   color:rgb(255, 221, 0);
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.516);
   padding-block: 1em;
-  padding-inline: 5em;
   letter-spacing: -1px;
   border-block: 1px solid white;
 }
