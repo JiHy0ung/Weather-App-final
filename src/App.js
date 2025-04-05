@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /*
   2025년 04월 04일 금요일
   작성자: 유지형
@@ -119,7 +120,7 @@ function App() {
       getWeatherByCity();
     }
 
-  }, [city]);
+  }, [city, getCurrentLocation, getWeatherByCity]);
 
   return (
     <div className = {`${type}`}>
