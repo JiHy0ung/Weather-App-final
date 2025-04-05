@@ -29,7 +29,7 @@ function App() {
   
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const type = weather ? getWeatherCategory(weather.weather[0].id) : "";
 
