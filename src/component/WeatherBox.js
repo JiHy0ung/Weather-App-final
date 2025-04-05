@@ -3,7 +3,7 @@ import { wDescEngToKor } from '../utils/weatherKor'
 import cityNameMap from '../utils/cityKor'
 
 
-const WeatherBox = ({weather}) => {
+const WeatherBox = ({weather, loading}) => {
 
     const cityNameKor = cityNameMap[weather?.name] || weather?.name;
  
@@ -17,13 +17,13 @@ const WeatherBox = ({weather}) => {
                 */}
                 {cityNameKor}
             </h5>
-            <h3 className = "temp">
-                {/* 간단하게 소수점 첫째자리까지만 보이도록 함. */}
-                {weather?.main.temp.toFixed(1)}℃ / {(weather?.main.temp * (9 / 5) + 32).toFixed(1)}℉
-            </h3>
             <h4 className = "sky">
                 {wDescEngToKor(weather?.weather[0]?.id)}
             </h4>
+            <h3 className = "temp">
+                {/* 간단하게 소수점 첫째자리까지만 보이도록 함. */}
+                {weather?.main.temp.toFixed(1)}°C / {(weather?.main.temp * (9 / 5) + 32).toFixed(1)}°F
+            </h3>
         </div>
     </div>
   )

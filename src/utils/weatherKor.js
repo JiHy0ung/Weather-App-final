@@ -2,6 +2,17 @@
     영어로 제공되는 날씨 정보를 한글로 확인할 수 있도록 바꿔줌.
     https://gist.github.com/choipd/e73201a4653a5e56e830#file-openweathermap_api_translation_ko
 */
+
+export function getWeatherCategory(w_id) {
+  if (w_id >= 200 && w_id < 600) return "rain";
+  if (w_id >= 600 && w_id < 700) return "snow"; 
+  if (w_id >= 700 && w_id < 800) return "misty";
+  if (w_id >= 800 && w_id < 804) return "sunny";
+  if (w_id >= 804 && w_id < 900) return "cloudy";
+  if ((w_id >= 900 && w_id < 903) && (w_id >= 957 && w_id <= 962))return "extreme";
+  return "unknown";
+}
+
 export function wDescEngToKor(w_id) {
     const w_id_arr = [201,200,202,210,211,212,221,230,231,232,
       300,301,302,310,311,312,313,314,321,500,

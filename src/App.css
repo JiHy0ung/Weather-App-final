@@ -1,30 +1,135 @@
 @font-face {
-  font-family: 'S-CoreDream-3Light';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
-  font-weight: normal;
+  font-family: 'Paperlogy';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+  font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'S-CoreDream-6Bold';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
-  font-weight: normal;
+  font-family: 'Paperlogy';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+  font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'S-CoreDream-9Black';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff');
-  font-weight: normal;
+  font-family: 'Paperlogy';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+  font-weight: 300;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paperlogy';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
 
 body{
-  background-image: url('https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/advice/industry/weather-forecast-background.jpg');
+  background-image: url('/images/background.png'), url('https://wmo.int/sites/default/files/2023-12/thumbnails_5.jpg');
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  font-family: 'Paperlogy';
+}
+
+.sunny{
+  background-image: url('/images/background.png'), url('https://cdn2.hubspot.net/hubfs/2936356/maxresdefault.jpg');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.cloudy{
+  background-image: url('/images/background.png'), url('https://cdn.pixabay.com/photo/2023/03/08/17/01/darling-7838296_1280.jpg');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.misty{
+  background-image: url('/images/background.png'), url('  https://cdn.pixabay.com/photo/2023/01/13/05/06/doomsday-style-7715286_1280.jpg');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.rain{
+  background-image: url('/images/background.png'), url('https://d.newsweek.com/en/full/2620629/cities-break-rain-records-atmospheric-river.jpg?w=1200&f=16c68d9cabcb5bbf077b9f176f9e2d86');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.snow{
+  background-image: url('/images/background.png'), url('https://upload.wikimedia.org/wikipedia/commons/e/e2/Snowing_%28201423329%29.jpeg');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.extreme{
+  background-image: url('/images/background.png'), url('  https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/hurricane--tornado/tornado-in-the-usa.-photo-matt-clark.jpg');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  transform: translateY(-200px);
 }
 
 .container{
@@ -40,11 +145,8 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid white;
-  border-radius: 15px;
+  width: 40vw;
   padding: 2em;
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(2px);
   gap: 2em;
 }
 
@@ -52,41 +154,88 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-family: 'S-CoreDream-3Light';
+  gap: 5px;
+  text-align: left;
 }
 
 .place{
-  font-family: 'S-CoreDream-3Light';
-}
+  font-family: 'Paperlogy';
+  font-weight: 600;
+  font-size: 50px;
+  letter-spacing: -1px;
 
-.temp{
-  font-family: 'S-CoreDream-6Bold';
 }
 
 .sky{
-  font-family: 'S-CoreDream-3Light';
+  font-family: 'Paperlogy';
+  font-size: 25px;
+  font-weight: 200;
+  letter-spacing: -1px;
+
+}
+
+.temp{
+  font-family: 'Paperlogy';
+  font-weight: 400;
+  font-size: 20px;
+  
+}
+
+.w-msg{
+  font-family: 'Paperlogy';
+  font-weight: 800;
+  font-size: 20px;
+  color:rgb(255, 221, 0);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.516);
+  padding-block: 1em;
+  padding-inline: 5em;
+  letter-spacing: -1px;
+  border-block: 1px solid white;
 }
 
 .buttons{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  border: 1px solid white;
-  border-radius: 15px;
+  gap: 0.5em;
   padding-block: 1em;
+  padding-inline: 1em;
+  font-family: 'Paperlogy';
+}
+
+.cur-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-inline: 3em;
-  background-color: rgba(255, 255, 255, 0.5);
-  font-family: 'S-CoreDream-6Bold';
+  text-shadow: none !important;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  font-family: 'Paperlogy';
+}
+
+.cur-btn-shadow{
+  padding-inline: 2em !important;
+  font-weight: 700 !important;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cur-btn-shadow:active{
+  color: mediumslateblue !important;
+  transform: scale(0.95);
+}
+
+.cur-btn-shadow:hover{
+  color: mediumslateblue !important;
+  background-color: rgb(255, 255, 255) !important;
 }
 
 .button-shadow{
-  color:rgb(0, 0, 0);
-  background-color: rgba(255, 255, 255);
+  color:rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.5) !important;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  font-weight: 700 !important;
+  letter-spacing: -0.5px;
 }
 
 .button-shadow:active{
@@ -96,6 +245,7 @@ body{
 }
 
 .button-shadow:hover{
+  text-shadow: none !important;
   color: cornflowerblue !important; 
 }
 
@@ -115,11 +265,11 @@ body{
   }
 
   .buttons{
-    width: 70vw;
+    width: 80vw;
   }
 
   .button-shadow{
-    font-size: 10px !important;
+    font-size: 15px !important;
   }
 
 }

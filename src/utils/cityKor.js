@@ -81,6 +81,7 @@ export const cityNameMap = {
     "San Diego": "샌디에이고",
     "Dallas": "댈러스",
     "San Jose": "산호세",
+    "Hawaii": "하와이",
 
     // UK
     "London": "런던",
@@ -102,6 +103,26 @@ export const cityNameMap = {
     "Guangzhou": "광저우",
     "Shenzhen": "선전",
     "Chengdu": "청두",
+
+    // Southeast Asia
+    "Bangkok": "방콕",               // 태국
+    "Hanoi": "하노이",               // 베트남
+    "Ho Chi Minh City": "호찌민",     // 베트남
+    "Jakarta": "자카르타",           // 인도네시아
+    "Surabaya": "수라바야",           // 인도네시아
+    "Manila": "마닐라",              // 필리핀
+    "Cebu": "세부",                 // 필리핀
+    "Kuala Lumpur": "쿠알라룸푸르",   // 말레이시아
+    "George Town": "조지타운",       // 말레이시아
+    "Singapore": "싱가포르",         // 싱가포르 (이미 포함되어 있음)
+    "Yangon": "양곤",               // 미얀마
+    "Naypyidaw": "네피도",          // 미얀마
+    "Phnom Penh": "프놈펜",         // 캄보디아
+    "Siem Reap": "씨엠립",           // 캄보디아
+    "Vientiane": "비엔티안",         // 라오스
+    "Luang Prabang": "루앙프라방",    // 라오스
+    "Bandar Seri Begawan": "반다르세리베가완", // 브루나이
+    "Dili": "딜리",                 // 동티모르
 
     // France
     "Paris": "파리",
@@ -132,9 +153,7 @@ export const cityNameMap = {
     "Madrid": "마드리드",
     "Rome": "로마",
     "Istanbul": "이스탄불",
-    "Bangkok": "방콕",
     "Dubai": "두바이",
-    "Singapore": "싱가포르",
     "New Delhi": "뉴델리",
     "Mexico City": "멕시코시티",
     "Cairo": "카이로"
