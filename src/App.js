@@ -29,18 +29,24 @@ function App() {
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [apiError, setAPIError] = useState("");
 
   const type = weather ? getWeatherCategory(weather.weather[0].id) : "";
 
 
   const getWeatherByCurrentLocation = async(lat, lon) =>{
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${OPENWEATHER_API_KEY}&units=metric`;
-    setLoading(true);
-    let response = await fetch(url);
-    let data = await response.json();
-    console.log(data);
-    setWeather(data);
-    setLoading(false);
+    try {
+      let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${OPENWEATHER_API_KEY}&units=metric`;
+      setLoading(true);
+      let response = await fetch(url);
+      let data = await response.json();
+      console.log(data);
+      setWeather(data);
+      setLoading(false);
+    } catch (error) {
+      setAPIError(error.message);
+      setLoading(false);
+    }
   }
 
   const getCurrentLocation = () =>{
@@ -56,13 +62,18 @@ function App() {
   } 
 
   const getWeatherByCity = async() =>{
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${OPENWEATHER_API_KEY}&units=metric`
-    setLoading(true);
-    let response = await fetch(url);
-    let data = await response.json();
-    console.log(data);
-    setWeather(data);
-    setLoading(false);
+    try {
+      let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${OPENWEATHER_API_KEY}&units=metric`
+      setLoading(true);
+      let response = await fetch(url);
+      let data = await response.json();
+      console.log(data);
+      setWeather(data);
+      setLoading(false);
+    } catch (error) {
+      setAPIError(error.message);
+      setLoading(false);
+    }
   }
 
   function getWeatherMessage(weather) {
@@ -126,31 +137,22 @@ function App() {
     <div className = {`${type}`}>
         <div className = "container">
           {loading?
-          <MoonLoader
-            color = "#ffffff"
-            loading={loading}
-            size={100}
-            speedMultiplier={0.8}
-          />
+          <MoonLoader color = "#ffffff" loading={loading} size={100} speedMultiplier={0.8}/>
           :
-          <div className = "a"> 
-          
-            <div className = "box">
-            
-              <WeatherBox weather = {weather} loading = {loading}/>
-
+          !apiError ? (
+            <div className = "a"> 
+              <div className = "box">
+                <WeatherBox weather = {weather} loading = {loading}/>
+              </div>
+              <div className="w-msg">
+                {getWeatherMessage(weather)}
+              </div>
+              <WeatherButtons cities = {cities} changeCity = {changeCity} city={city}/>
             </div>
-            
-            <div className="w-msg">
-              {getWeatherMessage(weather)}
-            </div>
-
-            <WeatherButtons cities = {cities} changeCity = {changeCity} city={city}/>
-
-          </div>
-          
+          ) : (
+            apiError
+          )
           }
-          
       </div>
     </div>
   );
