@@ -201,50 +201,88 @@ body{
   font-family: 'Paperlogy';
 }
 
+.button-shadow{
+  color:rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  border-radius: 10px;
+  border: none;
+  padding-block: 0.4em;
+  padding-inline: 1em;
+}
+
+.button-shadow:active{
+  color: cornflowerblue;
+  transform: scale(1.05);
+  text-shadow: none;
+  background-color: rgba(255, 255, 255);
+  font-weight: 900;
+
+}
+
+.button-shadow.active{
+  color: cornflowerblue;
+  transform: scale(1.05);
+  text-shadow: none;
+  background-color: rgba(255, 255, 255);
+  font-weight: 900;
+  border: 1px solid cornflowerblue;
+}
+
+.button-shadow:hover{
+  color: cornflowerblue;
+  transform: scale(1.05);
+  text-shadow: none;
+  background-color: rgba(255, 255, 255);
+  font-weight: 900;
+
+}
+
 .cur-btn{
   display: flex;
   justify-content: center;
   align-items: center;
   padding-inline: 3em;
-  text-shadow: none !important;
+  text-shadow: none;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   font-family: 'Paperlogy';
+  border-radius: 15px;
 }
 
 .cur-btn-shadow{
-  padding-inline: 2em !important;
-  font-weight: 700 !important;
+  padding-inline: 2em;
+  padding-block: 0.5em;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  border: 1px solid white;
 }
 
 .cur-btn-shadow:active{
-  color: mediumslateblue !important;
-  transform: scale(0.95);
+  color: mediumslateblue;
+  transform: scale(1.05);
+  background-color: rgb(244, 243, 255);
+  font-weight: 900;
+}
+
+.cur-btn-shadow.active{
+  color: mediumslateblue;
+  transform: scale(1.05);
+  background-color: rgb(244, 243, 255);
+  font-weight: 900;
+  border: 1px solid mediumslateblue;
+
 }
 
 .cur-btn-shadow:hover{
-  color: mediumslateblue !important;
-  background-color: rgb(255, 255, 255) !important;
-}
-
-.button-shadow{
-  color:rgb(255, 255, 255);
-  background-color: rgba(255, 255, 255, 0.5) !important;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-  font-weight: 700 !important;
-  letter-spacing: -0.5px;
-}
-
-.button-shadow:active{
-  color: cornflowerblue !important;
-  transform: scale(0.95);
-  text-shadow: none;
-}
-
-.button-shadow:hover{
-  text-shadow: none !important;
-  color: cornflowerblue !important; 
+  color: mediumslateblue;
+  transform: scale(1.05);
+  background-color: rgb(244, 243, 255);
+  font-weight: 900;
 }
 
 @media (max-width: 768px) {

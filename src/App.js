@@ -51,6 +51,7 @@ function App() {
       let lon = position.coords.longitude;
 
       getWeatherByCurrentLocation(lat, lon);
+      
     });
   } 
 
@@ -144,7 +145,7 @@ function App() {
               {getWeatherMessage(weather)}
             </div>
 
-            <WeatherButtons cities = {cities} changeCity = {changeCity}/>
+            <WeatherButtons cities = {cities} changeCity = {changeCity} city={city}/>
 
           </div>
           
